@@ -1,0 +1,37 @@
+// Vectorization.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <ctime>
+using namespace std;
+int N;
+
+void dependencyByFour(double* a, int n) {
+	for (int i = 4; i < n; i += 4)
+	{
+		a[i] = a[i - 1] + 1;
+		a[i + 1] = 5 / a[i - 1] - a[i - 2];
+		a[i + 2] = a[i - 2] + a[i - 3];
+		a[i + 3] = a[i - 2] - a[i - 4];
+	}
+}
+int main()
+{
+	N = 1000000;
+	double* x = new double[N];
+	double** D = new double*[N];
+	double * A = new double[N];
+	int* B = new int[N];
+	for (int k = 0; k < N; k++)
+	{
+		x[k] = (double)rand() / RAND_MAX * 10000;
+		D[k] = new double[N];
+		A[k] = (double)rand() / RAND_MAX * 10000;
+		B[k] = (int)rand() / RAND_MAX * 10000;
+	}
+
+	dependencyByFour(x, N);
+    return 0;
+}
+

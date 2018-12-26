@@ -1,0 +1,32 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(23,2)
+   remark #15527: loop was not vectorized: function call to rand() cannot be vectorized   [ C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(25,18) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: unsupprtStructLoop(double *, _x *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(13,2)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(13,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(13,2)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================

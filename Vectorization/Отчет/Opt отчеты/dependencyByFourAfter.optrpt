@@ -1,0 +1,40 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(12,2) inlined into C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(35,2)
+   remark #15301: SIMD LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(12,2) inlined into C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(35,2)
+<Remainder loop for vectorization>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(27,2)
+   remark #15523: loop was not vectorized: loop control variable k was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+===========================================================================
+
+Begin optimization report for: dependencyByFour(double *, int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(12,2)
+   remark #15301: SIMD LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at C:\Users\Evgenii\source\repos\Vectorization\Vectorization\vectorization.cpp(12,2)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
